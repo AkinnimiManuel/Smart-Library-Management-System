@@ -1,4 +1,5 @@
 import json
+from config import BOOKS_FILE
 
 library_name = "Welcome to Smart Library Management System (SLMS)"
 version = "1.0"
@@ -21,14 +22,16 @@ def generate_Id():
 
 #create save book
 def save_books():
-    with open("books.json", "w") as file:
+    with open(BOOKS_FILE, "w") as file:
         json.dump(books, file, indent=4)
+
+
 
 def load_books():
     global books
 
     try:
-        with open("books.json", "r") as file:
+        with open(BOOKS_FILE, "r") as file:
             books = json.load(file)
 
     except FileNotFoundError:
