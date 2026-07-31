@@ -6,6 +6,7 @@ version = "1.0"
 #The book list
 books = []
 
+
 #Function to generate ID
 def generate_Id():
     if not books:
