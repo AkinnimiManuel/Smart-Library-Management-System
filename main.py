@@ -1,50 +1,16 @@
 import json
 from config import BOOKS_FILE
+from services.storage_service import *
+from services.book_service import *
 
 library_name = "Welcome to Smart Library Management System (SLMS)"
 version = "1.0"
-
-#The book list
-books = []
-
-
-#Function to generate ID
-def generate_Id():
-    if not books:
-        return "BK1001"
-    
-    highest_id = max(int (book["id"][2:]) for book in books) 
-
-    return f"BK{highest_id + 1}"
-
-
-
-
-#create save book
-def save_books():
-    with open(BOOKS_FILE, "w") as file:
-        json.dump(books, file, indent=4)
-
-
-
-def load_books():
-    global books
-
-    try:
-        with open(BOOKS_FILE, "r") as file:
-            books = json.load(file)
-
-    except FileNotFoundError:
-        books = []
-
 
 #clear screen
 def clear_screen():
     #windows
     import os
     os.system("cls" if os.name == "nt" else "clear")
-
-
 
 #create a welcome header
 def show_header():
@@ -68,58 +34,7 @@ def show_menu():
 #Book Management Menu
 def book_management_menu():
     clear_screen()
-
-
-
-    def add_book():
-        print("ADD NEW BOOK")
-        print("-" * 30)
-
-        #ask for input
-        book_id = generate_Id()
-        title = input("Tiltle: ")
-        author = input("Author: ")
-        category = input("Category: ")
-        year = input("Year: ")
-        copies = input("Copies: ")
-
-        book = {
-            "id": book_id,
-            "title": title,
-            "author": author,
-            "category": category,
-            "year": year,
-            "copies": copies,
-            "available copies": copies,
-            "times borrowed": 0,
-        }
-
-        books.append(book)
-        save_books()
-
-        print("Book Added Successfully")
-
-   
-    def view_books():
-        print("\nLIBRARY BOOKS")
-        print("-" * 50)
-
-        for book in books:
-            print (f"ID: {book['id']}")
-            print (f"Title: {book['title']}")
-            print(f"Author: {book['author']}")
-            print(f"Category: {book['category']}")
-            print(f"Year: {book['year']}")
-            print(f"Copies: {book['copies']}")
-            print("-" * 50)
-
-        if len(books) == 0:
-            print("No books available.")
-            return
-        
-
-        #JSON is just a text file used to store structured data.
-
+  
     def edit_books():
         print("\nEdit Book")
    
@@ -161,9 +76,10 @@ def book_management_menu():
         input("\nPress Enter to continue...")
 
 
-load_books()
+load_data(BOOKS_FILE)  # Load books from the JSON file at the start of the program
 
 #Main Menu Loop
+
 while True:
     clear_screen()
     show_header()
