@@ -1,9 +1,8 @@
 from config import BOOKS_FILE
 from services.storage_service import *
 
-
-#The book list
-books = []
+# Load books when this module is imported
+books = load_data(BOOKS_FILE)
 
 #Function to generate ID
 def generate_Id():

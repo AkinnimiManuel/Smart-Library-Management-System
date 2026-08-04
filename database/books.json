@@ -1,12 +1,32 @@
 [
     {
         "id": "BK1001",
-        "title": "g",
-        "author": "g",
-        "category": "g",
-        "year": "g",
-        "copies": "g",
-        "available copies": "g",
+        "title": "dddd",
+        "author": "ddd",
+        "category": "ddd",
+        "year": "ddd",
+        "copies": "ddd",
+        "available copies": "ddd",
+        "times borrowed": 0
+    },
+    {
+        "id": "BK1002",
+        "title": "sss",
+        "author": "aaa",
+        "category": "sss",
+        "year": "fff",
+        "copies": "ddd",
+        "available copies": "ddd",
+        "times borrowed": 0
+    },
+    {
+        "id": "BK1003",
+        "title": "ddd",
+        "author": "ddd",
+        "category": "ddd",
+        "year": "rrr",
+        "copies": "rrr",
+        "available copies": "rrr",
         "times borrowed": 0
     }
 ]
