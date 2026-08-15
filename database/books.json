@@ -28,5 +28,25 @@
         "copies": "rrr",
         "available copies": "rrr",
         "times borrowed": 0
+    },
+    {
+        "id": "BK1004",
+        "title": "Batman",
+        "author": "Stefan",
+        "category": "fiction",
+        "year": "2007",
+        "copies": "222222222",
+        "available copies": "222222222",
+        "times borrowed": 0
+    },
+    {
+        "id": "BK1005",
+        "title": "Mansory",
+        "author": "Stefan",
+        "category": "Fiction",
+        "year": "2006",
+        "copies": "20",
+        "available copies": "20",
+        "times borrowed": 0
     }
 ]

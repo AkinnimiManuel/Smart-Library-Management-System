@@ -1,17 +1,10 @@
 from config import BOOKS_FILE
 from services.storage_service import *
+from utils.id_generator import *
+from utils.constant import *
 
 # Load books when this module is imported
 books = load_data(BOOKS_FILE)
-
-#Function to generate ID
-def generate_Id():
-    if not books:
-        return "BK1001"
-    
-    highest_id = max(int (book["id"][2:]) for book in books) 
-
-    return f"BK{highest_id + 1}"
 
 
 def add_book():
@@ -19,8 +12,8 @@ def add_book():
         print("-" * 30)
 
         #ask for input
-        book_id = generate_Id()
-        title = input("Tiltle: ")
+        book_id = generate_Id(books, BOOK_ID_PREFIX, BOOK_START_ID)
+        title = input("Title: ")
         author = input("Author: ")
         category = input("Category: ")
         year = input("Year: ")

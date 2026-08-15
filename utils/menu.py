@@ -1,13 +1,11 @@
 from utils.helper import *
 from services.book_service import *
-
-library_name = "Welcome to Smart Library Management System (SLMS)"
-version = "1.0"
+from utils.constant import *
 
 #create a welcome header
 def show_header():
     print("=" * 60)
-    print(f"{library_name} - Version {version}")
+    print(f"{APP_NAME} - Version {VERSION}")
     print("=" * 60)
     print()
 
