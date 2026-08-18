@@ -13,11 +13,8 @@ def add_book():
 
         #ask for input
         book_id = generate_Id(books, BOOK_ID_PREFIX, BOOK_START_ID)
-<<<<<<< HEAD
+
         title = input("Title: ")
-=======
-        title = input("Tiltle: ")
->>>>>>> 341ba892cb3d85f5d4fa205b3c75ee13fae65229
         author = input("Author: ")
         category = input("Category: ")
         year = input("Year: ")
