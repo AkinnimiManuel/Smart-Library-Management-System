@@ -38,6 +38,7 @@
         "copies": "222222222",
         "available copies": "222222222",
         "times borrowed": 0
+<<<<<<< HEAD
     },
     {
         "id": "BK1005",
@@ -48,5 +49,7 @@
         "copies": "20",
         "available copies": "20",
         "times borrowed": 0
+=======
+>>>>>>> 341ba892cb3d85f5d4fa205b3c75ee13fae65229
     }
 ]
