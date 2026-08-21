@@ -87,6 +87,44 @@ Save Everything
 
 Now the student sees how two datasets interact.
 
+
+                 BORROW BOOK
+                      │
+                      ▼
+              Enter Member ID
+                      │
+                      ▼
+              Does member exist?
+                 │          │
+                No         Yes
+                 │          │
+              Error         ▼
+                     Enter Book ID
+                          │
+                          ▼
+                    Does book exist?
+                     │          │
+                    No         Yes
+                     │          │
+                  Error         ▼
+                       Is book available?
+                         │          │
+                        No         Yes
+                         │          │
+                      Error         ▼
+                         Borrow Book
+                              │
+                ┌─────────────┼─────────────┐
+                ▼             ▼             ▼
+          Reduce copies   Add book ID   Increment
+          available       to member     borrow count
+                │             │             │
+                └─────────────┼─────────────┘
+                              ▼
+                       Save both JSON files
+                              │
+                              ▼
+                    "Book borrowed successfully"
 ---
 
 ### Session 8
